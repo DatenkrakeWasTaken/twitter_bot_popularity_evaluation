@@ -1,5 +1,5 @@
 =================================
-Twitter_Bot_Popularity_Evaluation
+Twitter Bot Popularity Evaluation
 =================================
 
 
