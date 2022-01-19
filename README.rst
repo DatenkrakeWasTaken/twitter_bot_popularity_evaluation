@@ -20,7 +20,7 @@ Twitter_Bot_Popularity_Evaluation
 
 
 
-Twitter bot for evaluating popularity of two different topics, in this case cats and dogs.[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[C[C: cats and dogs.
+Twitter bot for evaluating popularity of two different topics, in this case cats and dogs.
 
 
 * Free software: MIT license
