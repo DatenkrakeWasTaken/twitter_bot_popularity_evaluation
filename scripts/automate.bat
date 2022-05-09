@@ -1,0 +1,1 @@
+"D:\Anaconda\envs\dis18\python.exe" "D:\Daten\TH\Projektarbeit\twitter_bot_popularity_evaluation\scripts\post.py"
