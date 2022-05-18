@@ -40,8 +40,8 @@ cats['text'] = cats.apply(lambda row: str(row.text) + ' ' + str(row.hashtags), a
 # In[19]:
 
 
-dogs['image'] = dogs.apply(lambda row: '../content/dogs/images/'+row.image, axis=1)
-cats['image'] = cats.apply(lambda row: '../content/cats/images/'+row.image, axis=1)
+dogs['image'] = dogs.apply(lambda row: 'content/dogs/images/'+row.image, axis=1)
+cats['image'] = cats.apply(lambda row: 'content/cats/images/'+row.image, axis=1)
 
 
 # In[20]:
