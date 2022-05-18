@@ -5,11 +5,11 @@
 
 
 import tweepy
-import keyring
 import datetime
 import pandas as pd
 import numpy as np
 import pickle
+import os
 
 
 # ## Parameters and impo
@@ -55,29 +55,39 @@ cats['text'] = cats.apply(lambda row: row.text.replace('nan ', ''), axis=1)
 
 # In[21]:
 
+api_key = os.environ['api_key']
+api_key_secret = os.environ['api_key_secret']
+bearer_token = os.environ['bearer_token']
+client_id = os.environ['client_id']
+client_secret = os.environ['client_secret']
+access_token_dog = os.environ['access_token_dog']
+access_token_cat = os.environ['access_token_cat']
+access_token_secret_dog = os.environ['access_token_secret_dog']
+access_token_secret_cat = os.environ['access_token_secret_cat']
 
-client_dog = tweepy.Client(keyring.get_password('twitter','bearer_token'), keyring.get_password('twitter','api_key'), keyring.get_password('twitter','api_key_secret'), keyring.get_password('twitter','access_token'), keyring.get_password('twitter','access_token_secret'))        
+
+client_dog = tweepy.Client(bearer_token, api_key, api_key_secret, access_token_dog, access_token_secret_dog)        
 
 
 # In[22]:
 
 
-client_cat = tweepy.Client(keyring.get_password('twitter','bearer_token'), keyring.get_password('twitter','api_key'), keyring.get_password('twitter','api_key_secret'), keyring.get_password('twitter','access_token_cat'), keyring.get_password('twitter','access_token_secret_cat'))
+client_cat = tweepy.Client(bearer_token, api_key, api_key_secret, access_token_cat, access_token_secret_cat)
 
 
 # In[23]:
 
 
-auth_dog = tweepy.OAuthHandler(keyring.get_password('twitter','api_key'), keyring.get_password('twitter','api_key_secret'))
-auth_dog.set_access_token(keyring.get_password('twitter','access_token'), keyring.get_password('twitter','access_token_secret'))
+auth_dog = tweepy.OAuthHandler(api_key, api_key_secret)
+auth_dog.set_access_token(access_token_dog, access_token_secret_dog)
 api_dog = tweepy.API(auth_dog)
 
 
 # In[24]:
 
 
-auth_cat = tweepy.OAuthHandler(keyring.get_password('twitter','api_key'), keyring.get_password('twitter','api_key_secret'))
-auth_cat.set_access_token(keyring.get_password('twitter','access_token_cat'), keyring.get_password('twitter','access_token_secret_cat'))
+auth_cat = tweepy.OAuthHandler(api_key, api_key_secret)
+auth_cat.set_access_token(access_token_cat, access_token_secret_cat)
 api_cat = tweepy.API(auth_cat)
 
 
