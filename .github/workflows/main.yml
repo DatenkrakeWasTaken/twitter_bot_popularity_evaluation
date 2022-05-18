@@ -30,7 +30,7 @@ jobs:
         
       - name: execute py script # run the run.py to get the latest data
         run: |
-          python twitter_bot_popularity_evaluation/scripts/post.py
+          python scripts/post.py
         env:
           api_key: ${{ secrets.API_KEY }}
           api_key_secret: ${{ secrets.API_KEY_SECRET }}
