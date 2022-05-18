@@ -24,9 +24,9 @@ user_id_cat = 1514287408677806082
 # In[17]:
 
 
-with open('../content/dogs/posts.pickle','rb') as f:
+with open('../../content/dogs/posts.pickle','rb') as f:
     dogs = pickle.load(f)
-with open('../content/cats/posts.pickle','rb') as f:
+with open('../../content/cats/posts.pickle','rb') as f:
     cats = pickle.load(f)    
 
 
