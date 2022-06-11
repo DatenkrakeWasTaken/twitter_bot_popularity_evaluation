@@ -4,8 +4,8 @@ name: tweet
 
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron: "0 11,16 * * *" #runs at 11:00 and 16:00 UTC everyday
+#  schedule:
+#    - cron: "0 11,16 * * *" #runs at 11:00 and 16:00 UTC everyday
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
